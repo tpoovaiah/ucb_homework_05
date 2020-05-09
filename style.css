@@ -1,0 +1,17 @@
+.past {
+    background-color: gray;
+}
+
+.present {
+    background-color: green;
+}
+
+.future {
+    background-color: lightblue;
+}
+
+.save {
+    background-color: teal;
+    color: white;
+    border:rgb(0, 56, 56) solid 1px;
+}

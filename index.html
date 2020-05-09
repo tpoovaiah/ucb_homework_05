@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Daily Planner</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/e3897fd785.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="style.css">
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Fluid jumbotron</h1>
+              <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+              <div id="current-time"></div>
+              <div id="current-day"></div>
+            </div>
+          </div>
+      
+       
+
+        <div class="container time-block">
+            <div class="row">
+              <div class="col-md-1" id="hour" value="22">10PM</div>
+              <textarea class="col-md-10 description"></textarea>
+              <button class="col-md-1 btn saveBtn save"><i class="far fa-save"></i></button>
+            </div>
+        </div>
+
+        <div class="container time-block">
+          <div class="row">
+            <div class="col-md-1" id="hour" value="23">11PM</div>
+            <textarea class="col-md-10 description"></textarea>
+            <button class="col-md-1 btn saveBtn save"><i class="far fa-save"></i></button>
+          </div>
+      </div>
+
+        
+
+       
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
