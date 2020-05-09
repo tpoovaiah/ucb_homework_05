@@ -2,59 +2,39 @@
 
 $(document).ready(function() {
     
-    $(".save").on("click", function(){
+    $(".saveBtn").on("click", function(){
         var value = $(this).siblings(".description").val()
-        var time = $(this).parent().attr("id")
-        localStorage.setItem(value, time)
+        var time = $(this).closest(".time-block").attr("id")
+        localStorage.setItem(time, value)
     })
 
     function displayTime(){
 
         $(".time-block").each(function(){
         
-            var time = moment()
-            var currentTime = parseInt(time.hour())
-            var timeBlock = parseInt($("#hour").attr("value"))
+            var currentTime = parseInt(moment().hours());
+            var hourBlock = parseInt($(this).attr("id"));
 
-            //$("#current-time").text(currentTime)
-            $("#current-day").text(time.format('dddd' + ", " + 'MMMM D' + " " + 'h:m:s A'))
+            $(this).find(".description").val(localStorage.getItem(hourBlock))
 
-            //var hour = currentTime.hour()
-        
-
-            //$("#current-day").text(timeBlock)
-
-
-            if (currentTime>timeBlock) 
+            if (currentTime>hourBlock) 
             {
-                $(".description").addClass("past");
+                $(this).find(".description").addClass("past");
             }
 
-            else if (parseInt(currentTime)===parseInt(timeBlock)){
-                $(".description").removeClass("past");
-                $(".description").addClass("present");
+            else if (currentTime===hourBlock){
+                $(this).find(".description").addClass("present");
             }
 
             else {
-                $(".description").removeClass("past");
-                $(".description").removeClass("present");
-                $(".description").addClass("future");
+                $(this).find(".description").addClass("future");
             }
 
-            //think about this below...apply "each" to each id? maybe .hour?
         });
     }
+
+    $("#current-day").text(moment().format('dddd' + ", " + 'MMMM D'))
     
     displayTime();
-
-
-
-
-$("hour8 .description").val(localStorage.getItem("hour8"))
-
-
-
-
-
 
 });

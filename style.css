@@ -3,15 +3,26 @@
 }
 
 .present {
-    background-color: green;
+    background-color: rgb(124, 213, 124);
 }
 
 .future {
     background-color: lightblue;
 }
 
-.save {
+.saveBtn {
     background-color: teal;
     color: white;
     border:rgb(0, 56, 56) solid 1px;
+}
+
+.time-format {
+    border-top: dashed 2px darkgray;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.jumbotron {
+    text-align: center;
+    border-bottom: solid black 5px;
 }
